@@ -10,6 +10,17 @@
       "bower_components/normalize-css/normalize.css",
       "bower_components/flickity/dist/flickity.css",
       "app/assets/css/style.css",
+      "bower_components/jquery-colorbox/example3/colorbox.css",
+
+      "bower_components/jquery-colorbox/jquery.colorbox.js",
+      "bower_components/nette-forms/src/assets/netteForms.min.js",
+      "bower_components/nette.ajax.js/nette.ajax.js",
+      "bower_components/history.nette.ajax.js/client-side/history.ajax.js",
+      "app/assets/js/extensions/loadProducts.js",
+      "app/assets/js/extensions/spinner.js",
+      "app/assets/js/extensions/modal.js",
+      "app/assets/js/veneo-orderNote.js",
+      "app/assets/js/veneo-init.js",
 
       "bower_components/flickity/dist/flickity.pkgd.js",
       "bower_components/imagesloaded/imagesloaded.pkgd.js",

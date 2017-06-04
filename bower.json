@@ -21,6 +21,10 @@
     "flickity": "~2.0.2",
     "waypoints": "~4.0.0",
     "imagesloaded": "~4.1.0",
-    "scroll-up-bar": "~0.3.0"
+    "scroll-up-bar": "~0.3.0",
+    "nette.ajax.js": "^2.3.0",
+    "history.nette.ajax.js": "^2.0.0",
+    "nette-forms": "^2.4.4",
+    "jquery-colorbox": "colorbox#^1.6.4"
   }
 }
