@@ -1,7 +1,7 @@
 {
   "dev": {
     "root": "app/",
-    "proxy": "localhost/veneo/app/",
+    "proxy": "veneo.l",
 
     "resources": "gulp/resources.json",
 
