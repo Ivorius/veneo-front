@@ -9,6 +9,6 @@ require("./gulp/tasks/svg.js");
 require("./gulp/tasks/build.js");
 
 require("./gulp/tasks/move.js");
-gulp.task("php", ["server:php", "watch"]);
+gulp.task("php", ["server:php"]);
 
 gulp.task("default", ["server:html", "watch"]);

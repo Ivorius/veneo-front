@@ -21,9 +21,13 @@ gulp.task("server:html", ["styles", "templates"], function() {
 });
 
 // Set-up a proxy for PHP files
-gulp.task("server:php", ["styles", "templates"], function() {
+gulp.task("server:php", ["move:files"], function() {
   plugins.browserSync.init({
     proxy: config.dev.proxy,
-    notify: false
+   // notify: false
   });
+
+    gulp.watch(config.dev.jsGlob,["watchAndMove"]);
 });
+
+gulp.task('watchAndMove', ["move:files"],  plugins.browserSync.reload);
