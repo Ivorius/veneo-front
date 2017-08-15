@@ -25,6 +25,8 @@
             });
         },
         open: function (el) {
+            var self = this;
+
             var content = el.children();
             if (!content.length) {
                 return; // ignore empty modal
@@ -61,9 +63,39 @@
 
                 },
                 onCleanup: function(){
+                    var checkbox = el.find("input[name='switch[pojistka]']");
+                    if(checkbox.length &&  checkbox.is(':checked')) {
+                       self.customizatePrice(checkbox.data('price'));
+                    }
+
+                    var engrave = el.find("textarea[name='engrave[ryti_text]']");
+                    if(engrave.length && engrave.val() != '') {
+                        var text = engrave.val().replace(' ', '');
+                        self.customizatePrice(engrave.data('price') * text.length);
+                        self.customizateExpedition();
+                    } else {
+                        //pokud smaze ryti, smaz i expedicni dobu
+                        $('#customization_expedition').remove();
+                    }
+
                     el.hide();
                 }
             });
+        },
+        customizatePrice: function(price) {
+            if($('#customization_price').length == 0) {
+                $('#price_ins').after('<span id="customization_price">+' + price + '</span> ');
+            } else {
+                $('#customization_price').text('+' + price);
+            }
+
+        },
+        customizateExpedition: function() {
+            var expedition = $('input.customizator').data('expedition');
+            if($('#customization_expedition').length == 0) {
+                $('<span id="customization_expedition">' + expedition + '</span>').insertAfter('#expedition').hide();
+            }
+            chooseExpedition();
         }
     });
 
