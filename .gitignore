@@ -37,7 +37,7 @@ $RECYCLE.BIN/
 ## Custom
 _ignore
 _source_files
-
+.idea
 dist
 
 app/assets/fonts/*
