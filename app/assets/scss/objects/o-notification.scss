@@ -11,7 +11,7 @@
 
   transition: transform $duration--b;
 
-  &:not(:hover),
+  //&:not(:hover),
   .notification--is-closed & {
     transform: translateY(-100%);
   }
@@ -25,9 +25,9 @@
   }
 }
 
-.o-notification--neutral  { background-color: $neutral--900; }
-.o-notification--positive { background-color: $positive--550; }
-.o-notification--negative { background-color: $negative--900; }
+.o-notification--neutral, .o-notification--info { background-color: $neutral--900; }
+.o-notification--positive, .o-notification--success, .o-notification--ok { background-color: $positive--550; }
+.o-notification--negative, .o-notification--error { background-color: $negative--900; }
 
 .o-notification {
   &__wrap {

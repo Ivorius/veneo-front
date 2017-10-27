@@ -5,7 +5,7 @@ function notify(force) {
     $body.addClass("notification--is-closed");
   }
 
-  setTimeout(function() {
-    $body.removeClass("notification--is-active notification--is-closed");
-  }, 5000);
+  // setTimeout(function() {
+  //   $body.removeClass("notification--is-active notification--is-closed");
+  // }, 5000);
 }
