@@ -98,7 +98,7 @@
   }
 }
 
-.modal--is-open #modal {
+.modal--is-open .m-modal, .m-modal.activated {
   display: block;
 
   @include media($tablet-up) {

@@ -29,4 +29,25 @@ function veneoToggle() {
       $html.toggleClass(this.dataset.check, this.checked);
     });
   }
+
+
+
+
+    $("[data-activate]").on("click", function(event) {
+        event.preventDefault();
+        var
+            $thisEl = $(this);
+
+        $('.' + $thisEl.attr("data-activate")).addClass('activated');
+    });
+
+
+    $("[data-deactivate]").on("click", function(event) {
+        event.preventDefault();
+        var
+            $thisEl = $(this);
+
+        $('.' + $thisEl.attr("data-deactivate")).removeClass('activated');
+    });
+
 }

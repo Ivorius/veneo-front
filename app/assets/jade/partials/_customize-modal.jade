@@ -1,6 +1,6 @@
-#modal.m-modal
+.m-modal(class='modal-#{index}')
   form.m-modal__form(action="", method="post", novalidate="")
-    a.m-modal__close(href="#", data-remove="modal--is-open"): include ../../svg/icon_close.svg
+    a.m-modal__close(href="#", data-remove="modal--is-open", data-deactivate="m-modal"): include ../../svg/icon_close.svg
 
     fieldset.m-modal__set
       .m-modal__top
@@ -29,4 +29,4 @@
         input.o-submit--solid(type="submit", value="Odeslat úpravy")
     input.hidden(type="hidden", name="_do", value="customizeProduct-kameny-submit")
 
-  a.m-modal__overlay(href="#", data-remove="modal--is-open")
+  a.m-modal__overlay(href="#", data-remove="modal--is-open", data-deactivate="m-modal")

@@ -34,15 +34,17 @@ block template-content
                         strong.o-cart__note Skladem
                     if (index == 4)
                       li.o-cart__option
-                        a.o-cart__action--tan(href="#")
+                        a.o-cart__action--tan(href="#", data-activate="modal-#{index}")
                           span.o-cart__icon: include ../svg/icon_customize.svg
                           strong.o-cart__note Upraveno na míru
                             span.o-cart__message Prosím o vyrytí následujícího dovnitř prstenu: “Pro…
+                        include partials/_customize-modal
                     else
                       li.o-cart__option
-                        a(href="#")
+                        a(href="#", data-activate="modal-#{index}")
                           span.o-cart__icon: include ../svg/icon_customize.svg
                           strong.o-cart__note Upravit na míru
+                        include partials/_customize-modal
 
               .o-cart__aside
                 .o-cart__specify
