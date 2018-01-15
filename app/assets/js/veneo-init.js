@@ -75,24 +75,7 @@ function recall() {
         chooseExpedition();
     });
 
-
-    /* customize product*/
-    $('input.customizator').on('click', function (e) {
-        if ($(this).prop('checked')) {
-            var link = $(this).data('link');
-            $.nette.ajax({
-                url: link
-            });
-
-            var a = $('a.customize-text');
-            a.text(a.data('text'));
-        } else {
-            $('a.customize-text').text('');
-            $('#customization_price').remove();
-            chooseExpedition();
-        }
-    });
-
+    customizator();
 
     /* variants */
     $("select[name='variant']").on('change', function () {
