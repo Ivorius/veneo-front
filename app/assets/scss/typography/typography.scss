@@ -152,7 +152,7 @@
 
 .t-link--light {
   @include link--light;
-  
+
   border-bottom: $stroke--s solid;
 }
 .t-link--white {
@@ -164,4 +164,8 @@
   @include link--tan;
 
   border-bottom: $stroke--s solid;
+}
+
+.text-center {
+  text-align: center;
 }

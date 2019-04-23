@@ -1,4 +1,5 @@
 (function($, undefined) {
+    var ajaxContent = false;
 
     $.nette.ext('ajaxContent', {
         start: function() {
@@ -9,7 +10,7 @@
             if (payload.snippets) {
                 for (var i in payload.snippets) {
                     if(i == 'snippet--ajaxContent') {
-                        recall();
+                        ajaxContent = true;
                         $("[data-header]").removeClass('o-header--fade').addClass('o-header--stay');
 
                         veneoDropdown();
@@ -22,12 +23,24 @@
                         veneoMap();
                         veneoWaypoints();
                     }
+
+
                 }
             }
 
         },
         complete: function() {
             $("[data-header]").scrollupbar();
+            veneoProduct();
+            veneoSelectSubmit();
+
+            if (ajaxContent) {
+                window.scroll({
+                    top: 0,
+                    behaviour: "smooth"
+                });
+            }
+
         }
     });
 
