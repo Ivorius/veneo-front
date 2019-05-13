@@ -32,13 +32,13 @@ $(document).ready(function () {
 
 
     //ajax na úvodce
-    $('#hpCategory li a').click(function (e) {
-        var $link = jQuery(this);
-        jQuery.nette.ajax({
-            url: $link.attr('data-catproducts-url')
-        });
-        e.preventDefault();
-    });
+    // $('#hpCategory li a').click(function (e) {
+    //     var $link = jQuery(this);
+    //     jQuery.nette.ajax({
+    //         url: $link.attr('data-catproducts-url')
+    //     });
+    //     e.preventDefault();
+    // });
 
 
     $(".topSelector").change(function () {
