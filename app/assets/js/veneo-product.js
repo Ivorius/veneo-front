@@ -29,6 +29,11 @@ function veneoProduct() {
   /* variants */
   $("select[name='variant']").on('change', function () {
     var id = $(this).find(":selected").val();
+
+    if(variantWeight) {
+      $("#weight").find("span.weight").text(variantWeight[id]);
+    }
+
     if (variantPrices)
       $("#price_ins").text(variantPrices[id]['withTax']);
   }).change();
