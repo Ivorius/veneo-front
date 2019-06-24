@@ -23,16 +23,13 @@
                 customizator();
             }
 
+            //colorbox
+            if(payload.close === "modal") {
+                $.fn.colorbox.close();
+            }
+
         }
     }, {
-        bind: function (el) {
-            //ajax form in modal colorbox
-            el.find('form.modal-ajax').on('submit', function (e) {
-                $(this).netteAjax(e, {}).done(function () {
-                    $.fn.colorbox.close();
-                });
-            });
-        },
         open: function (el) {
             var self = this;
 
@@ -40,8 +37,6 @@
             if (!content.length) {
                 return; // ignore empty modal
             }
-
-            this.bind(el);
 
             $.colorbox({
                 href: el,
