@@ -34,8 +34,15 @@ function veneoProduct() {
       $("#weight").find("span.weight").text(variantWeight[id]);
     }
 
-    if (variantPrices)
-      $("#price_ins").text(variantPrices[id]['withTax']);
+    if(variantMaterialPrices) {
+      var materialPrice = variantMaterialPrices[id];
+
+      $("ul.o-mats li").each(function() {
+          var index = $(this).data('option');
+          $(this).find('.o-mats__price').text(materialPrice[index]);
+      });
+    }
+
   }).change();
 
 
