@@ -18,7 +18,7 @@
 
             //classic modal
             if (payload.modal == 'close') {
-                $('html').removeClass('modal--is-open');
+                $('html').removeClass('modal--is-open modal-5 modal-6');
                 $('.m-modal.active').removeClass('active');
                 customizator();
             }

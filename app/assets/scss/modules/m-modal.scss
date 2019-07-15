@@ -98,7 +98,9 @@
   }
 }
 
-.modal--is-open .m-modal, .m-modal.activated {
+.modal--is-open.modal-5 .m-modal.modal-5,
+.modal--is-open.modal-6 .m-modal.modal-6,
+.m-modal.activated {
   display: block;
 
   @include media($tablet-up) {

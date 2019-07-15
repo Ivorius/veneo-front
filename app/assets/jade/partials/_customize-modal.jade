@@ -1,6 +1,6 @@
-.m-modal(class='modal-#{index}')
+.m-modal(class='modal-5')
   form.m-modal__form(action="", method="post", novalidate="")
-    a.m-modal__close(href="#", data-remove="modal--is-open", data-deactivate="m-modal"): include ../../svg/icon_close.svg
+    a.m-modal__close(href="#", data-remove="modal--is-open modal-5", data-deactivate="m-modal"): include ../../svg/icon_close.svg
 
     fieldset.m-modal__set
       .m-modal__top
@@ -29,4 +29,28 @@
         input.o-submit--solid(type="submit", value="Odeslat úpravy")
     input.hidden(type="hidden", name="_do", value="customizeProduct-kameny-submit")
 
-  a.m-modal__overlay(href="#", data-remove="modal--is-open", data-deactivate="m-modal")
+  a.m-modal__overlay(href="#", data-remove="modal--is-open modal-5", data-deactivate="m-modal")
+
+.m-modal(class='modal-6')
+  .m-modal__form
+    a.m-modal__close(href="#", data-remove="modal--is-open modal-6", data-deactivate="m-modal"): include ../../svg/icon_close.svg
+
+    .m-modal__set
+      .m-modal__top
+        .m-modal__title.t-head--two Jak správně změřit velikost prstenu
+      .m-modal__row
+        p Velikost prstenu. Zlatník, který má k dispozici profesionální měřící nástroje, tzv. klenotnické kroužky, vám řekne číslo mezi 41-76. Znamená to, že obvod prstu, na kterém budete prsten nosit, &nbsp;je 41-76 mm.
+        p Pokud jste z Prostějova a okolí, rádi vás <strong>zdarma změříme</strong> v naší <a href="kontakty.html">kamenné prodejně</a>. Pro ostatní máme <strong>dva návody,</strong> jak se změřit svépomocí doma:
+        ul.o-list
+          li.o-list__item Pokud <strong>nějaký prsten nosíte, měřte podle něj.</strong> Pravítkem změřte jeho vnitřní průměr, vynásobte číslem π (3,14) a získáte přesný obvod prstenu. Příklad: změřili jste 21? Výsledek je 65,94. Zaokrouhlete na 66 a <strong>máte velikost prstenu, kterou potřebujete. Tento způsob využijete</strong> například v situaci, kdy má být prsten překvapením a obdarovaný nemá dopředu nic tušit.
+          li.o-list__item Vyrobte si jednoduchou pomůcku. Z tvrdšího&nbsp;<strong>papíru vystřihněte pásek</strong> a obtočte jej kolem prstu. V místě, kde se konce proužku protnou, udělejte značku. <strong>Výslednou vzdálenost změřte,</strong> právě ona značí hledanou velikost prstenu. Na měření určitě <strong>nepoužívejte nepřesný krejčovský metr.</strong>
+          #rozhovor
+            <strong>Nepřehlédněte:</strong> Může se stát, že přestože budete měřit pečlivě, nebude prsten sedět. Nákupem u nás neriskujete, že dostanete šperk, který nebudete moci nosit. Velikost hotového prstenu vám<strong> zdarma upravíme.</strong>
+          h3 Při měření nezapomeňte, že:
+          ul.o-list
+            li.o-list__item Prsty mohou během dne otékat. <strong>Měřte nejlépe ráno, odpočatí a v klidu</strong> (ne po cvičení nebo namáhané práci) při pokojové teplotě.
+            li.o-list__item <strong>Nejširším místem prstu je kloub, </strong>přes který budete prsten navlékat.
+            li.o-list__item Každý prsten je jiný, i tvar šperku či osazení kameny mohou rozhodovat o tom, jak prsten padne.
+          p <strong>Nevíte si rady? </strong>Nejste si jisti, zda jste se změřili přesně a máte strach prsten “na dálku” objednat?<a href="kontakty.html"> Spojte se s námi</a>, poradíme a pomůžeme vám. A nezapomeňte, velikost prstenu vám v případě potřeby <strong>upravíme zdarma.</strong>
+
+  a.m-modal__overlay(href="#", data-remove="modal--is-open modal-6", data-deactivate="m-modal")
