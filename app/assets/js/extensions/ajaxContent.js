@@ -12,7 +12,7 @@
                 for (var i in payload.snippets) {
                     if(i == 'snippet--ajaxContent') {
                         ajaxContent = true;
-                        // $("[data-header]").removeClass('o-header--fade').addClass('o-header--stay');
+                        $("[data-header]").removeClass('o-header--fade').addClass('o-header--stay');
 
                         veneoDropdown();
                         veneoScroll();
