@@ -9,6 +9,7 @@
     "site": [
       "bower_components/normalize-css/normalize.css",
       "bower_components/flickity/dist/flickity.css",
+      "bower_components/flickity-fade/flickity-fade.css",
       "app/assets/css/style.css",
       "bower_components/jquery-colorbox/example3/colorbox.css",
 
@@ -27,6 +28,7 @@
       "app/assets/js/veneo-selectSubmit.js",
 
       "bower_components/flickity/dist/flickity.pkgd.js",
+      "bower_components/flickity-fade/flickity-fade.js",
       "bower_components/imagesloaded/imagesloaded.pkgd.js",
       "bower_components/scroll-up-bar/dist/scroll-up-bar.js",
       "bower_components/waypoints/lib/jquery.waypoints.js",
