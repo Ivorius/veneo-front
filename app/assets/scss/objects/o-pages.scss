@@ -68,7 +68,8 @@
     color: white;
   }
 
-  &.link--is-active {
+  &.link--is-active,
+  .o-pages__item.current & {
     color: white;
 
     font-weight: $font__sans--medium;
