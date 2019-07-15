@@ -3,7 +3,8 @@
 
     $.nette.ext('ajaxContent', {
         start: function() {
-            $.scrollupbar.destroy();
+            // $.scrollupbar.destroy();
+            $("[data-header]").headroom('destroy');
         },
         success: function (payload) {
 
@@ -11,7 +12,7 @@
                 for (var i in payload.snippets) {
                     if(i == 'snippet--ajaxContent') {
                         ajaxContent = true;
-                        $("[data-header]").removeClass('o-header--fade').addClass('o-header--stay');
+                        // $("[data-header]").removeClass('o-header--fade').addClass('o-header--stay');
 
                         veneoDropdown();
                         veneoScroll();
@@ -30,7 +31,25 @@
 
         },
         complete: function() {
-            $("[data-header]").scrollupbar();
+            // $("[data-header]").scrollupbar();
+            $("[data-header]").headroom({
+                classes : {
+                    // when element is initialised
+                    initial : "headroom",
+                    // when scrolling up
+                    pinned : "header--pinned",
+                    // when scrolling down
+                    unpinned : "header--unpinned",
+                    // when above offset
+                    top : "header--top",
+                    // when below offset
+                    notTop : "header--not-top",
+                    // when at bottom of scoll area
+                    bottom : "header--bottom",
+                    // when not at bottom of scroll area
+                    notBottom : "header--not-bottom"
+                },
+            });
             veneoProduct();
             veneoSelectSubmit();
 

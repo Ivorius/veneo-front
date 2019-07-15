@@ -1,5 +1,23 @@
 /* On page load */
-$("[data-header]").scrollupbar();
+// $("[data-header]").scrollupbar();
+$("[data-header]").headroom({
+    classes : {
+        // when element is initialised
+        initial : "headroom",
+        // when scrolling up
+        pinned : "header--pinned",
+        // when scrolling down
+        unpinned : "header--unpinned",
+        // when above offset
+        top : "header--top",
+        // when below offset
+        notTop : "header--not-top",
+        // when at bottom of scoll area
+        bottom : "header--bottom",
+        // when not at bottom of scroll area
+        notBottom : "header--not-bottom"
+    },
+});
 veneoInit();
 veneoDropdown();
 veneoScroll();

@@ -32,6 +32,8 @@
       "bower_components/imagesloaded/imagesloaded.pkgd.js",
       "bower_components/scroll-up-bar/dist/scroll-up-bar.js",
       "bower_components/waypoints/lib/jquery.waypoints.js",
+      "node_modules/headroom.js/dist/headroom.js",
+      "node_modules/headroom.js/dist/jQuery.headroom.js",
       "app/assets/js/app.js",
       "app/assets/js/v-detect.js",
       "app/assets/js/v-device.js",
