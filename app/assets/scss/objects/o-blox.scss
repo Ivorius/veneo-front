@@ -1,4 +1,6 @@
 .o-blox {
+  text-align: left;
+
   @include media($tablet-up) {
     display: table;
     width: 100%;
