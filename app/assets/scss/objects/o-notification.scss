@@ -11,17 +11,27 @@
 
   transition: transform $duration--b;
 
-  //&:not(:hover),
-  .notification--is-closed & {
-    transform: translateY(-100%);
-  }
-
   .notification--is-active & {
     animation: 5s both notify;
   }
 
   &:hover {
     animation-play-state: paused;
+  }
+}
+
+[class^="o-notification--"]:not(.o-notification--static),
+[class*=" o-notification--"]:not(.o-notification--static) {
+  //&:not(:hover),
+  .notification--is-closed & {
+    transform: translateY(-100%);
+  }
+}
+
+.o-notification--static {
+  //&:not(:hover),
+  .notification-static--is-closed & {
+    transform: translateY(-100%);
   }
 }
 
