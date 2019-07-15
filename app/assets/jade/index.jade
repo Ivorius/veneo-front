@@ -40,3 +40,11 @@ block template-content
   include partials/_stats
 
   include partials/_footer
+
+  section.o-notification--info
+    .o-notification__wrap
+      .o-notification__content
+        span.o-notification__icon
+          <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)"><circle class="svg-stroke" cx="10" cy="10" r="10"></circle><path class="svg-stroke" d="M10 9v5"></path><circle class="svg-fill" cx="10" cy="6" r="1"></circle></g></svg>
+        strong.o-notification__text První týden července 2016 jsme na veletrhu šperkařství. Děkujeme za pochopení.
+      button(class="o-notification__close", onclick="notify(true)"): include ../svg/icon_close.svg
