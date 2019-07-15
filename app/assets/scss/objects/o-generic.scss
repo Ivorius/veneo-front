@@ -1,6 +1,4 @@
-.o-generic__article {
-  text-align: center;
-
+.o-generic__container {
   max-width: 65em;
 
   p {
@@ -12,4 +10,10 @@
 
     border-bottom: $stroke--s solid;
   }
+
+  text-align: center;
+}
+
+.o-generic__container--left {
+  text-align: left;
 }

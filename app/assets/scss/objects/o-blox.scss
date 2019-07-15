@@ -41,12 +41,17 @@
   }
 }
 
-.o-blox__content--white {
+.o-blox__content--white,
+.o-blox__content--gray {
   a {
     @include link--dark;
 
     border-bottom: $stroke--s solid;
   }
+}
+
+.o-blox__content--grey {
+  background-color: $grey--900;
 }
 
 .o-blox__flex {
@@ -64,7 +69,9 @@
 
   @include collapse-children;
 
-  p {
+  p,
+  ul,
+  ol {
     font-size: em(18);
 
     @include media($laptop-up) {
