@@ -4,66 +4,67 @@ block template-content
   +header("stay", null)
 
   section.o-top
-    article.o-generic__article.l-wrap
+    article.o-generic__article
       h1.t-head--one Nadpis první úrovně
-      p.t-medium
-        +dummy(30)
-      p.t-medium
-        +dummy(15)
-        | 
-        a(href="#"): +dummy(5)
+      .o-generic__container.l-wrap
+        p.t-medium
+          +dummy(30)
+        p.t-medium
+          +dummy(15)
+          | 
+          a(href="#"): +dummy(5)
 
-    article.o-blox
-      .o-blox__image(style="background-image: url('assets/images/photo_2.jpg')")
-      .o-blox__content--black
-        .o-blox__flex
-          .o-blox__intro
-            h3.t-head--five: +dummy(5, "words")
-            p: +dummy(20)
-          .o-blox__outro
-            p
-              +dummy(15)
-              | 
-              a(href="#"): +dummy(5)
-              | 
-              +dummy(10)
+      section.o-blox
+        .o-blox__image(style="background-image: url('assets/images/photo_2.jpg')")
+        .o-blox__content--black
+          .o-blox__flex
+            .o-blox__intro
+              h3.t-head--five: +dummy(5, "words")
+              p: +dummy(20)
+            .o-blox__outro
+              p
+                +dummy(15)
+                | 
+                a(href="#"): +dummy(5)
+                | 
+                +dummy(10)
 
-    article.o-blox
-      .o-blox__content--white
-        .o-blox__flex
-          .o-blox__intro
-            h3.t-head--five: +dummy(5, "words")
-            p: +dummy(10)
-          .o-blox__outro
-            ul.o-list
-              each instance in [1, 2, 3]
-                li.o-list__item: +dummy(instance * 5)
-            p
-              +dummy(10)
-              | 
-              a(href="#"): +dummy(5)
-              | 
-              +dummy(5)
-      .o-blox__image(style="background-image: url('assets/images/photo_3.jpg')")
+      section.o-blox
+        .o-blox__content--white
+          .o-blox__flex
+            .o-blox__intro
+              h3.t-head--five: +dummy(5, "words")
+              p: +dummy(10)
+            .o-blox__outro
+              ul.o-list
+                each instance in [1, 2, 3]
+                  li.o-list__item: +dummy(instance * 5)
+              p
+                +dummy(10)
+                | 
+                a(href="#"): +dummy(5)
+                | 
+                +dummy(5)
+        .o-blox__image(style="background-image: url('assets/images/photo_3.jpg')")
 
-    article.o-generic__article.l-wrap
-      h1.t-head--one Nadpis první úrovně
-      p.t-medium
-        +dummy(35)
-      h2.t-head--two Nadpis druhé úrovně
-      p.t-medium
-        +dummy(10)
-        | 
-        a(href="#"): +dummy(5)
-        | 
-        +dummy(10)
+      section.o-generic__container.l-wrap
+        h2.t-head--one Nadpis první úrovně
+        p.t-medium
+          +dummy(35)
+        h2.t-head--two Nadpis druhé úrovně
+        p.t-medium
+          +dummy(10)
+          | 
+          a(href="#"): +dummy(5)
+          | 
+          +dummy(10)
 
-  section.o-section--light.l-wrap
-    h1.o-section__head--center.t-head--one Mohlo by Vás zajímat
+      section.o-section--light.l-wrap
+        h1.o-section__head--center.t-head--one Mohlo by Vás zajímat
 
-    ul.o-triad
-      each instance in ["Příběhy našich zákazníků", "Filozofie značky", "Nejčastější dotazy"]
-        li.o-triad__item: a.o-triad__link.t-medium(href="#")= instance
+        ul.o-triad
+          each instance in ["Příběhy našich zákazníků", "Filozofie značky", "Nejčastější dotazy"]
+            li.o-triad__item: a.o-triad__link.t-medium(href="#")= instance
 
   include partials/_stats
 

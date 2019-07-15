@@ -1,3 +1,7 @@
+.o-qa {
+  text-align: left;
+}
+
 .o-qa__top {
   counter-reset: top-count section-count;
 
@@ -100,6 +104,11 @@
     @include link--medium;
 
     border-bottom: $stroke--s solid;
+  }
+
+  ul,
+  ol {
+    padding-left: 1em;
   }
 
   &:last-child {

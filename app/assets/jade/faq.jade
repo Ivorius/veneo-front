@@ -4,59 +4,242 @@ block template-content
   +header("stay", "Časté otázky")
 
   section.o-top
-    article.o-generic__article.l-wrap
+    article.o-generic__article
       h1.t-head--one Časté otázky
-      p.t-medium
-        +dummy(15)
-        | 
-        a(href="#"): +dummy(5)
-        | 
-        +dummy(10)
+      .o-generic__container.l-wrap
+        p.t-medium Z&nbsp;<a href="/">katalogu</a> i&nbsp;<a href="/sperky-na-zakazku.html">vyrobené na zakázku</a>. Šperky Veneo.<br> Jak rychle je dodáte a&nbsp;jak za ně mohu zaplatit? Poradíte mi s&nbsp;výběrem? Jakým způsobem ručíte za kvalitu a&nbsp;pravost? A&nbsp;je možné šperky po zaplacení vracet?
 
-    .o-frequent.o-section--light.l-wrap
-      h2.o-frequent__title.t-head--five Nejhledanější
-      ul.o-frequent__list
-        each instance in ["Syntetický/přirodní opál", "Měření velikosti prstenu", "Rhodiování stříbra", "Dodání šperků skladem", "Osobní odběr"]
+      .o-frequent.o-section--light.l-wrap
+        h2.o-frequent__title.t-head--five Nejhledanější
+        ul.o-frequent__list
           li.o-frequent__item
-            a(href="#").o-frequent__link= instance
+            a(data-scrollto, href="#anchor-syntetickyopal").o-frequent__link Syntetický/přirodní opál
+          li.o-frequent__item
+            a(href="http://magazin.veneo.cz/jak-spravne-zmerit-velikost-prstenu/").o-frequent__link Měření velikosti prstenu
+          li.o-frequent__item
+            a(data-scrollto, href="#anchor-rhodiovani").o-frequent__link Rhodiování stříbra
+          li.o-frequent__item
+            a(data-scrollto, href="#anchor-osobni-odber").o-frequent__link Dodání šperků skladem
+          li.o-frequent__item
+            a(data-scrollto, href="#anchor-osobni-odber").o-frequent__link Osobní odběr
 
-  main.o-qa
-    .o-qa__top.l-wrap
-      each instance in [1, 2]
-        .o-qa__column
-          h3.o-qa__head.t-head--six: +dummy(5, "words")
-          ul.o-qa__anchors.o-list.o-list--big
-            - var randomNumber = Math.ceil((Math.random() * 4))
-            - var itemCount = 0
-            while itemCount < randomNumber
-              li.o-qa__anchor.o-list__item: a.o-qa__link(data-scrollto, href="#anchor-#{randomNumber}"): +dummy(10)
-              - itemCount++
-          h3.o-qa__head.t-head--six: +dummy(5, "words")
-          ul.o-qa__anchors.o-list.o-list--big
-            - itemCount = 0
-            while itemCount < randomNumber
-              li.o-qa__anchor.o-list__item: a.o-qa__link(data-scrollto, href="#anchor-#{randomNumber}"): +dummy(10)
-              - itemCount++
+      section.o-qa
+        .o-qa__top.l-wrap
+          .o-qa__column
+            h3.o-qa__head.t-head--six Výroba šperků na zakázku, úpravy šperků
+            ul.o-qa__anchors.o-list.o-list--big
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-vyroba") Výrábíte šperky na zakázku, popř. dle předlohy?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-upravy") Úpravujete i&nbsp;šperky z&nbsp;katalogu? Kolik úpravy stojí?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-prirodni-vs-synteticke") Osazujete šperky drahokamy přírodními nebo syntetickými?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-pravost-kamene") Dostanu potvrzení, že je přírodní drahokam skutečně přírodní?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-doba-dodani-zakazka") Jak dlouho trvá dodání šperku vyráběného na zakázku?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-expresni-vyroba") Nabízíte možnost expresní výroby?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-uprava-velikosti") Šperk je malý/velký, nesedí. Upravíte jej a zaplatím za to něco?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-vyroba-do-paru") Ztracený prsten nebo náušnice. Vyrobíte i jeden kus z páru?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-rhodiovani") Rhodiování – o co se jedná a kolik to stojí?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-syntetickyopal") Pravé opály nebo syntetické, poradíte mi?
+          .o-qa__column
+            h3.o-qa__head.t-head--six Objednávka, expedice, platba
+            ul.o-qa__anchors.o-list.o-list--big
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-jak-nakoupit") Jak u vás mohu nakupovat?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-osobni-odber") Jaké jsou dodací lhůty? Nabízíte osobní odběr?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-zpusoby-doruceni") Jaké způsoby doručení nabízíte?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-zpusoby-platby") Jakým způsobem mohu za šperky zaplatit?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-zahranici") Expedujete i mimo Českou republiku?
+            h3.o-qa__head.t-head--six Záruka pravosti, vrácení zboží, reklamace
+            ul.o-qa__anchors.o-list.o-list--big
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-zaruka-pravosti") Poskytujete záruku pravosti zlatých šperků?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-vraceni") Mohu šperk vrátit?
+              li.o-qa__anchor.o-list__item
+                a.o-qa__link(data-scrollto, href="#anchor-zaruka") Na co se vztahuje záruka a jak dlouho platí?
 
-    each instance in [1, 2, 3, 4]
-      article.o-qa__topic.l-wrap
-        h2.o-qa__subhead.t-head--one: +dummy(5, "words")
-        dl.o-qa__entries
-          each item in [1, 2, 3]
-            dt.o-qa__entry(id="anchor-#{instance}")
-              h3.o-qa__term.t-head--three
-                +dummy(10)
+        article.o-qa__topic.l-wrap
+          h2.o-qa__subhead.t-head--one Výroba šperků na zakázku, úpravy šperků
+          dl.o-qa__entries
+            dt.o-qa__entry(id="anchor-vyroba")
+              h3.o-qa__term.t-head--three Výrábíte šperky na zakázku?
             dd.o-qa__description
-              - var randomNumber = Math.ceil((Math.random() * 2))
-              - var paragraphCount = 0
-              if item == 2
-                img(src="http://unsplash.it/1440/900/?image=#{instance * 20 + 100}", alt="unsplash.it")
-              while paragraphCount < randomNumber
-                p
-                  +dummy(item * (paragraphCount + 1) * 15)
-                  | 
-                  a(href="#"): +dummy(5)
-                - paragraphCount++
+              p Ano, výroba šperků na zakázku je základem našich služeb. <strong>Obecné shrnutí</strong> informací o zakázkové výrobě najdete na <a href="/sperky-na-zakazku.html">samostatné stránce</a>, na<strong> konkrétní otázky</strong> odpovídáme níže.
+            dt.o-qa__entry(id="anchor-vyroba")
+              h3.o-qa__term.t-head--three Mám představu, jak by měl šperk vypadat. Vyrobíte jej podle mého návrhu?
+            dd.o-qa__description
+              p Ano, vyrobíme. Pro začátek <a href="/kontakty.html">nám pošlete</a> obrázek, 3D model nebo fotografii, jak má šperk vypadat. Ozveme se zpět s doplňujícími dotazy a informacemi.
+            dt.o-qa__entry(id="anchor-vyroba")
+              h3.o-qa__term.t-head--three Vyrábíte šperky na zakázku?
+            dd.o-qa__description
+              p Ano, výroba šperků na zakázku je základem našich služeb. <strong>Obecné shrnutí</strong> informací o zakázkové výrobě najdete na <a href="/sperky-na-zakazku.html">samostatné stránce</a>, na<strong> konkrétní otázk</strong>y odpovídáme níže.
+            dt.o-qa__entry(id="anchor-vyroba-dle-navrhu")
+              h3.o-qa__term.t-head--three Mám představu, jak by měl šperk vypadat. Vyrobíte jej podle mého návrhu?
+            dd.o-qa__description
+              p Ano, vyrobíme. Pro začátek <a href="/kontakty.html">nám pošlete</a> obrázek, 3D model nebo fotografii, jak má šperk vypadat. Ozveme se zpět s doplňujícími dotazy a informacemi.
+            dt.o-qa__entry(id="anchor-upravy")
+              h3.o-qa__term.t-head--three Upravujete na zakázku i šperky z katalogu? Kolik úpravy stojí?
+            dd.o-qa__description
+              p Ano, jakýkoli šperk z&nbsp;<a href="/">katalogu Veneo</a> upravíme dle vašeho přání:
+              ul
+                li za příplatek <strong>vyryjeme</strong> na vybraný šperk monogramy, iniciály, obrázky. <strong>Jediným omezením</strong> je velikost plochy pro rytí
+                li u náušnic změníme typ zapínání (<a href="/nausnice/s-kameny/balerina-nausnice-s-ruzovymi-zirkony-1335/">na patent</a>, <a href="/nausnice/s-kameny/nausnice-s-opalem-n5001-op-blue-pv-1088/">visací na patent</a>,&nbsp;<a href="/nausnice/s-kameny/nausnice-s-opalem-s-plastikou-n3006-op-australian-crystal-white-b-1077/">na šroubek</a>, <a href="/nausnice/bez-kamenu/nausnice-s-plastikou-n3091-f-1115/">francouzské zapínání</a>...)
+                li šperk <strong>osadíme jiným drahokamem.</strong> V případě stejného druhu (například místo rubínu safír),<strong> zdarma,</strong> v případě druhu jiného (například opál namísto zirkonu) za příplatek.
+                li jakýkoli stříbrný šperk z katalogu <strong>vyrobíme i ve zlatě.</strong>
+            dt.o-qa__entry(id="anchor-uprava-z-katalogu")
+              h3.o-qa__term.t-head--three Chci upravit šperk z katalogu. Co mám udělat?
+            dd.o-qa__description
+              p Napište nám<a href="mailto:zlatnictvi@veneo.cz"> e-mail</a>, zavolejte. Námi <strong>preferovaný způsob?</strong> Využijte textové pole <strong>Poznámka k objednávce</strong> v <a href="/cart">Nákupním košíku</a>. Sem <strong>napište všechny úpravy,</strong> které žádáte - jiné zapínání, zlato namísto stříbra, výměnu kamene, text k rytí. V případě, že si úpravy <strong>vyžádají úhradu navíc</strong> nebo se prodlouží doba dodání, vás budeme informovat.
+              p <img class="imgmainleft" src="assets/images/uploaded/kameny3.jpg" alt=">Zleva doprava: zirkon (kubická zirkonie), Rubín, růžový zirkon, Safír, Spinel, Černý zirkon, Ametyst, Swarogreen, Padparač." width="430" height="215">
+            dt.o-qa__entry(id="anchor-prirodni-vs-synteticke")
+              h3.o-qa__term.t-head--three Osazujete šperky drahokamy přírodními nebo syntetickými?
+            dd.o-qa__description
+              p Nabízíme drahokamy <strong>přírodní i syntetické,</strong> šperky v <a href="/">katalogu</a> jsou vždy osazeny kameny syntetickými, pokud není uvedeno jinak. Na přání je <strong>vyměníme za přírodní.</strong> V případě osazení přírodním drahokamem počítejte s vyšší cenou šperku a delší dobou dodání (cca týden), přírodní kameny objednáváme.
+              p <strong>Příklad:</strong> Osazení prstenu pravým opálem navýší cenu šperku o přibližně 1000-2000 Kč, u náušnic může pravý opál stát i dvojnásobek.
+            dt.o-qa__entry(id="anchor-pravost-kamene")
+              h3.o-qa__term.t-head--three Dostanu potvrzení, že je přírodní drahokam skutečně přírodní?
+            dd.o-qa__description
+              p Ano, ke všem přírodním drahokamům (diamantům, přírodním opálům a dalším) dostanete <strong>certifikát pravosti.</strong>
+            dt.o-qa__entry(id="anchor-doba-dodani-zakazka")
+              h3.o-qa__term.t-head--three Jak dlouho trvá dodání šperku vyráběného na zakázku?
+            dd.o-qa__description
+              p Záleží na zvoleném materiálu, úpravách a osazení kameny:
+              ul
+                li <strong>úprava šperku z katalogu</strong> (rytí, změna zapínání u náušnic, výměna syntetického kamene za jiný, též syntetický): šperk <strong>expedujeme do dvou pracovních dnů.</strong>
+                li <strong>výroba šperku dle vašeho návrhu</strong> či výroba šperku z katalogu ve zlatě: <strong>šperk expedujeme do 1-2 týdnů,</strong> důvodem prodloužení expedice je odeslání šperku ke kontrole ryzosti na Puncovní úřad.
+            dt.o-qa__entry(id="anchor-expresni-vyroba")
+              h3.o-qa__term.t-head--three Šperk potřebuji co nejdříve. Nabízíte možnost expresní výroby?
+            dd.o-qa__description
+              p Ano, po předchozí domluvě zajistíme výrobu a expedici šperku ve zkrácené lhůtě. Vždy nás ale <a href="/kontakty.html">informujte</a> předem. Děkujeme.
+            dt.o-qa__entry(id="anchor-uprava-velikosti")
+              h3.o-qa__term.t-head--three Šperk je malý/velký, nesedí. Upravíte jej na míru a zaplatím za to něco?
+            dd.o-qa__description
+              p Ano, šperk<strong> zdarma upravíme nebo vyměníme.</strong> Zaplatíte pouze poštovné. Přiložte prosím průvodní dopis s popisem požadované úpravy, kontaktem na vás a číslem původní objednávky.
+            dt.o-qa__entry(id="anchor-vyroba-do-paru")
+              h3.o-qa__term.t-head--three Ztracený prsten nebo náušnice. Vyrobíte i jeden kus z páru?
+            dd.o-qa__description
+              p Ano, jakýkoli šperk, který lze odlít umíme “okopírovat” a vyrobit.
+            dt.o-qa__entry(id="anchor-rhodiovani")
+              h3.o-qa__term.t-head--three Upravujete stříbrné šperky rhodiováním? Kolik za něj zaplatím? A proč nechat stříbro rhodiovat?
+            dd.o-qa__description
+              p <strong>Ano, všechny šperky rhodiujeme automaticky a zdarma. </strong>Proč nechat stříbrný šperk rhodiovat? Jednoduchá úprava zaručí dokonalou <strong>ochranu proti oxidaci</strong> (šperk nezčerná), rhodiování je ekvivalentem pozlacování. Zvýší užitnou hodnotu šperku, rhodium je velmi tvrdé a výrazně<strong> snižuje míru otěru</strong> a riziko poškrábání šperku. Roste i hodnota estetická – rhodiovaný šperk<strong> získá vzhledové vlastnosti bílého zlata.</strong>
+              p <img class="imgmainright" src="assets/images/uploaded/kameny2.jpg" alt="Zleva doprava: Opál, opál australský (mléčný), opál Thajský, Korál" width="430" height="215">
+            dt.o-qa__entry(id="anchor-syntetickyopal")
+              h3.o-qa__term.t-head--three Chci šperk s opály. Jsou lepší pravé nebo syntetické, poradíte mi?
+            dd.o-qa__description
+              p Zcela jednoznačně <strong>doporučíme opály syntetické.</strong> Syntetický opál není “laciné sklo” nebo “náhražka”, uměle vyrobené opály jsou <strong>plnohodnotnou náhradou opálů přírodních,</strong> oproti kterým mají 3 přednosti:
+              ul
+                li Jsou vzhledově atraktivnější (barevnější, bez kazů).
+                li Jsou <strong>cenově výhodnější.</strong>
+                li Jsou k dispozici ihned.
+              p Konečné rozhodnutí je na vás. Abychom vaše rozhodování usnadnili,&nbsp;nabízíme možnost <strong>šperky,</strong> osazené syntetickými opály, vrátit v případě, že nebudete s jejich vzhledem spokojeni.&nbsp;Pokud jste rozhodnuti pro opály pravé, <a href="#syntetickedodani">přečtěte si více o jejich cenách a dodacích lhůtách</a>. Zajímat vás určitě bude také náš článek na toto téma – <a href="http://magazin.veneo.cz/synteticky-nebo-prirodni-kdo-se-v-tom-ma-vyznat/">Syntetický nebo přírodní. Kdo se v tom má vyznat?</a>
+
+        article.o-qa__topic.l-wrap
+          h2.o-qa__subhead.t-head--one Objednávka, expedice, platba
+          dl.o-qa__entries
+            dt.o-qa__entry(id="anchor-jak-nakoupit")
+              h3.o-qa__term.t-head--three Nakupuji u vás poprvé. Je to stejné jako v jiných e-shopech?
+            dd.o-qa__description
+              p Ano, nákup je stejný jako v jiných e-shopech a probíhá v několika standardních krocích:
+              ul
+                li V <a href="/">katalogu</a> vyberte produkt, o který máte zájem. Produkty můžete seřadit podle několika kritérií – dle data naskladnění (pokud hledáte novinky), dle kamene (pokud hledáte například šperky “jen s opály”) nebo dle ceny. Jedním kliknutím můžete <strong>přepnout mezi cenou pro šperky zlaté a šperky stříbrné.</strong>
+                li V dalším kroku zadejte počet kusů, pokud kupujete prsten,<strong> vyberte velikost</strong> (nevíte, jak velký prsten potřebujete? <a href="http://magazin.veneo.cz/jak-spravne-zmerit-velikost-prstenu/">Změřte se</a>). Máte vybráno? Pokračujte <strong>Do košíku.</strong>
+                li V košíku můžete měnit počet objednaných kusů (nezapomeňte po každé změně košík <strong>Přepočítat</strong>), jakékoli úpravy (rytí, jiný kámen...) napište do<strong> Poznámky k objednávce.</strong>
+                li Stisknutím <strong>K pokladně</strong> se přenesete na <strong>Objednávku</strong>, kde vás požádáme o dodací a platební údaje.
+                li Po <strong>Rekapitulaci</strong> objednávku tlačítkem <strong>Odeslat</strong> dokončíte a předáte k vyřízení.
+            dt.o-qa__entry(id="anchor-osobni-odber")
+              h3.o-qa__term.t-head--three Jaké jsou dodací lhůty? Nabízíte osobní odběr?
+            dd.o-qa__description
+              p Šperky skladem expedujeme obratem, při objednávce do 12.00 hod <strong>předáme balíček dopravci ještě týž den.</strong> Pokud budeme šperk upravovat, je expediční lhůta <strong>2 pracovní dny</strong> u šperků stříbrných a <strong>jeden až dva týdny</strong> u šperků, které vyrábíme ze zlata, tady dodací lhůtu prodlužuje odeslání šperku ke kontrole ryzosti na Puncovní úřad.
+              p <strong>Osobní odběr.</strong> Ano, objednávku si můžete vyzvednout na adrese naší kamenné prodejny Plumlovská 49, Prostějov. Předtím, než se k nám vydáte, prosím vyčkejte na e-mail, ve kterém potvrdíme, že je <strong>objednávka k osobnímu odběru připravena.</strong> Děkujeme.
+            dt.o-qa__entry(id="anchor-zpusoby-doruceni")
+              h3.o-qa__term.t-head--three Jaké způsoby doručení nabízíte?
+            dd.o-qa__description
+              p <img class="imgmainright" src="assets/images/uploaded/krabicka-veneo.jpg" alt="Naše dárková krabička ve které odesíláme všechny šperky" width="290" height="196">
+              p V současné době můžete využít tři způsoby dodání:
+              ul
+                li <strong>Osobní odběr</strong> – objednané zboží pro vás připravíme k vyzvednutí v naší prodejně Plumlovská 49, Prostějov. Předtím, než se k nám vydáte, prosím vyčkejte na e-mail, ve kterém potvrdíme, že je <strong>objednávka k osobnímu odběru připravena.</strong> Osobní odběr<strong> je zdarma.</strong>
+                li <strong>Cenné psaní České pošty</strong> – naprostou většinu objednávek expedujeme jako cenné psaní.&nbsp;Cenné psaní můžete <a href="http://www.ceskaposta.cz/cz/nastroje/sledovani-zasilky.php">dohledat on-line</a> na stránkách České pošty, <strong>poštovné je zdarma</strong> (zaplatíte pouze doběrečné 48 Kč v případě dobírky) a Česká pošta je dodává do dvou pracovních dnů. Úložní doba je 14 dnů.
+                li <strong>Balík do ruky</strong> - dříve známý také jako Obchodní balík. Česká pošta garantuje dodání následující pracovní den po odeslání, o doručování informuje prostřednictvím e-mailu a SMS. Balík do ruky zvolte v případě, že požadujete garanci dodání následující den po expedici, i Balík do ruky můžete <a href="http://www.ceskaposta.cz/cz/nastroje/sledovani-zasilky.php">dohledat on-line</a>. V případě Balíku do ruky platíte&nbsp;<strong>poštovné 114 Kč.</strong> Pozor: v případě, že vás nezastihne doručovatel České pošty, je Balík do ruky <strong>6 dnů uložen na vaší doručovací poště.</strong> Poté je vrácen zpět na naší adresu.
+              p Každý šperk zdarma odesíláme v <strong>dárkové krabičce.</strong>
+            dt.o-qa__entry(id="anchor-zpusoby-platby")
+              h3.o-qa__term.t-head--three Jakým způsobem mohu za objednané šperky zaplatit?
+            dd.o-qa__description
+                p V současné době nabízíme tři platební metody:
+                ul
+                  li <strong>Dobírka</strong>&nbsp;– objednané zboží uhradíte doručovateli České pošty.
+                  li <strong>Bankovní převod</strong>&nbsp;– objednávku vyexpedujeme po obdržení platby, platební údaje od nás dostanete e-mailem. Oproti dobírce ušetříte 40 Kč (poplatek České poště).
+                  li <strong>Hotově</strong>&nbsp;– v případě osobního odběru můžete za objednané zboží zaplatit také hotově.
+                table(id="anchor-tableco", class="o-table")
+                  tbody
+                    tr
+                      td <strong>Způsob dodání</strong>
+                      td <strong>Platba převodem či hotově při osobním odběru</strong>
+                      td <strong>Platba dobírkou</strong>
+                      td <strong>Celkem za expedici zaplatíte</strong>
+                    tr
+                      td Česká pošta – cenné psaní
+                      td 0 Kč
+                      td 50 Kč
+                      td 50 Kč
+                    tr
+                      td Česká pošta – balík do ruky
+                      td 114 Kč
+                      td 164 Kč
+                      td 114 – 164 Kč
+                    tr
+                      td Česká pošta – zahraničí
+                      td 99 Kč
+                      td nelze
+                      td 99 Kč
+                    tr
+                      td Osobní odběr
+                      td 0 Kč
+                      td nelze
+                      td 0 Kč
+            dt.o-qa__entry(id="anchor-zahranici")
+              h3.o-qa__term.t-head--three Bydlím v zahraničí. Expedujete i mimo Českou republiku?
+            dd.o-qa__description
+              p Ano, objednané šperky odešleme kamkoli po Evropě, po dohodě i jinam.
+
+        article.o-qa__topic.l-wrap
+          h2.o-qa__subhead.t-head--one Záruka, vrácení, reklamace
+          dl.o-qa__entries
+            dt.o-qa__entry(id="anchor-zaruka-pravosti")
+              h3.o-qa__term.t-head--three Poskytujete záruku pravosti zlatých šperků?
+            dd.o-qa__description
+              p Ano, všechny šperky Veneo jsou <strong>kontrolovány</strong> (každý kus)<strong> Puncovním úřadem</strong> (dle zákona). Lubomír Krčmář je <a href="http://www.puncovniurad.cz/cz/zlatnici.aspx">certifikovaným zlatnickým mistrem</a>, šperky z jeho zlatické dílny jsou opatřeny vlastní <a href="http://www.puncovniurad.cz/cz/zlatnik_znacka.aspx?Id=148">výrobní značkou</a>.
+            dt.o-qa__entry(id="anchor-vraceni")
+              h3.o-qa__term.t-head--three Na obrázku v e-shopu vypadal šperk jinak než ve skutečnosti. Mohu ho vrátit?
+            dd.o-qa__description
+              p Ano, šperky můžete<strong> vrátit do 14 dnů od zakoupení.</strong> Vrátit lze pouze šperky, které nebyly upravovány na míru, více informacích naleznete v<a href="/obchodni-podminky.html"> obchodních podmínkách</a>.
+            dt.o-qa__entry(id="anchor-zaruka")
+              h3.o-qa__term.t-head--three Na co se u šperků Veneo vztahuje záruka a jak dlouho platí?
+            dd.o-qa__description
+              p Na všechny šperky poskytujeme <strong>záruku 24 měsíců.</strong> Záruka se nevztahuje na mechanické poškození způsobené nešetrným zacházením, opotřebení výrobku způsobené běžným užíváním a oxidaci drahého kovu způsobenou vnějšími vlivy.
+
+      section.o-generic__container.l-wrap
+        p.t-medium Podrobné informace o poskytovaných <strong>zárukách a právních náležitostech nákupu</strong> naleznete v <a href="/obchodni-podminky.html">obchodních podmínkách</a>.
+        p.t-medium Nenašli jste odpověď na svůj dotaz? <a href="mailto:zlatnictvi@veneo.cz">Napište nám</a> nebo zavolejte.
+
+      section.o-section--light.l-wrap
+        h1.o-section__head--center.t-head--one Mohlo by Vás zajímat
+
+        ul.o-triad
+          each link, instance in {"Příběhy našich zákazníků": "vase-pribehy.html", "Výroba na zakázku": "sperky-na-zakazku.html", "Filozofie Veneo": "filozofie-veneo.html", "Napište nám": "contact.html"}
+            li.o-triad__item: a.o-triad__link.t-medium(href=link)= instance
 
   include partials/_stats
 
