@@ -1,7 +1,7 @@
 function veneoToggle() {
   $("[data-toggle]").on("click", function(event) {
     event.preventDefault();
-    
+
     var
       $thisEl = $(this);
 
@@ -26,7 +26,9 @@ function veneoToggle() {
 
   for (var i = 0; i < checkObj.length; i++) {
     checkObj[i].addEventListener("click", function(event) {
-      $html.toggleClass(this.dataset.check, this.checked);
+      if(this.checked) {
+        $('.' + this.dataset.check).addClass('activated');
+      }
     });
   }
 
