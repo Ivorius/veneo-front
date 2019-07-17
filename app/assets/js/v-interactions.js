@@ -43,6 +43,12 @@ function veneoInteractions() {
   })
 
   $searchToggle.on("click", function(event) {
+    if(!$(this).hasClass("toggle--is-active")) {
+      setTimeout(function() {
+        $(".o-spotlight__input").focus();
+      }, 250);
+    }
+
     $html.removeClass("pages--is-active");
     $pagesToggle.removeClass(toggleActiveClass);
   })
