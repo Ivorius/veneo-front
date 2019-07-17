@@ -1,6 +1,6 @@
 .m-modal(class='modal-5')
   form.m-modal__form(action="", method="post", novalidate="")
-    a.m-modal__close(href="#", data-remove="modal--is-open modal-5", data-deactivate="m-modal"): include ../../svg/icon_close.svg
+    a.m-modal__close(href="#", data-remove="modal--is-open", data-deactivate="m-modal"): include ../../svg/icon_close.svg
 
     fieldset.m-modal__set
       .m-modal__top
@@ -26,7 +26,9 @@
         textarea.o-textarea(rows="2", placeholder="Zde napište, co chcete vyrýt")
         span.m-modal__hint Cena 30 Kč/znak. V případě, že nebude možné z designového hlediska u šperku provést vnitřní rytí, budeme Vás telefonicky kontaktovat.
       .m-modal__row
-        input.o-submit--solid(type="submit", value="Odeslat úpravy")
+        .m-modal__buttons
+          input.m-modal__button.o-submit--solid(type="submit", value="Uložit úpravy")
+          a.m-modal__button.o-submit--cancel(href="#", data-remove="modal--is-open", data-deactivate="m-modal") Zrušit úpravy
     input.hidden(type="hidden", name="_do", value="customizeProduct-kameny-submit")
 
-  a.m-modal__overlay(href="#", data-remove="modal--is-open modal-5", data-deactivate="m-modal")
+  a.m-modal__overlay(href="#", data-remove="modal--is-open", data-deactivate="m-modal")

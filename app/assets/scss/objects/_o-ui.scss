@@ -102,6 +102,19 @@
   }
 }
 
+.o-submit--cancel.o-submit--cancel {
+  padding: .8125em 1.375em;
+  border: 0;
+
+  color: white;
+  background-color: $danger--500;
+
+  &:hover {
+    color: rgba(white, .75);
+    background-color: $danger--400;
+  }
+}
+
 .o-submit--outline {
   padding: .6875em 1.375em;
   border: $stroke--b solid currentColor;

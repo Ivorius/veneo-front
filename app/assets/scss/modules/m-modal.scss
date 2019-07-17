@@ -99,6 +99,15 @@
   }
 }
 
+.m-modal__buttons {
+  margin-top: -1em;
+}
+
+.m-modal__button {
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
 .modal--is-open .m-modal, .m-modal.activated {
   display: block;
 
