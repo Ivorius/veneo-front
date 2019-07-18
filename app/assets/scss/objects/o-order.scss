@@ -1,11 +1,16 @@
 .o-order {
   max-width: em($width--m);
+  text-align: left;
   
   @include margin(null auto);
 
   @include media($tablet-up) {
     margin-top: 3.5em;
   }
+}
+
+.o-order--nospace {
+  margin-top: 0;
 }
 
 .o-order__bar {
@@ -122,6 +127,10 @@
   }
 }
 
+.o-order__set--nospace {
+  padding-top: 0;
+}
+
 [class^="o-order__field"],
 [class*=" o-order__field"] {
   margin-bottom: 1.125em;
@@ -158,7 +167,8 @@
 }
 
 .o-order__action--down:after,
-.o-order__action--up:before {
+.o-order__action--up:before,
+.o-order__action--empty:before {
   display: block;
   width: $stroke--b;
 
@@ -177,6 +187,12 @@
   height: 4em;
 
   content: "";
+}
+.o-order__action--empty:before {
+  height: 4em;
+
+  content: "";
+  background-color: transparent;
 }
 
 

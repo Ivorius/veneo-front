@@ -1,0 +1,9 @@
+.o-breadcrumbs {
+    > li {
+        display: inline-block;
+    }
+
+    > li + li:before {
+        content: " / ";
+    }
+}

@@ -1,0 +1,18 @@
+extends templates/_site
+
+block template-content
+  +header("stay", null)
+
+  section.o-top
+    article.o-generic__article
+      h1.t-head--one Děkujeme za Vaší objednávku
+      .o-generic__container.l-wrap
+        p.t-medium <strong>Vaše objednávka č. 7423 byla úspěšně provedena a o dalším postupu Vás budeme informovat.</strong>
+        p.t-medium Rekapitulace objednávky spolu s dalšími údaji jsme Vám zaslali na email. Pokud budete potřebovat provést úpravu, kontaktujte nás.
+      .o-generic__container.l-wrap
+        h2.t-head--two O všem novém víte jako první na Facebooku
+        <div class="fb-like-box fb_iframe_widget" style="display: inline-block;" data-href="http://www.facebook.com/VeneoCZ" data-width="300" data-show-faces="true" data-stream="false" data-header="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=406779326002732&amp;container_width=1300&amp;header=false&amp;href=http%3A%2F%2Fwww.facebook.com%2FVeneoCZ&amp;locale=cs_CZ&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=300"><span style="vertical-align: bottom; width: 300px; height: 181px;"><iframe name="f89f370f6fdf18" width="300px" height="1000px" title="fb:like_box Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like_box.php?app_id=406779326002732&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df177eda4c81d44c%26domain%3Dwww.veneojewels.com%26origin%3Dhttps%253A%252F%252Fwww.veneojewels.com%252Ff10eca7894c6ff8%26relation%3Dparent.parent&amp;container_width=1300&amp;header=false&amp;href=http%3A%2F%2Fwww.facebook.com%2FVeneoCZ&amp;locale=cs_CZ&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=300" style="border: none; visibility: visible; width: 300px; height: 181px;" class=""></iframe></span></div>
+
+  include partials/_stats
+
+  include partials/_footer

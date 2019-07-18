@@ -1,6 +1,6 @@
 /* On page load */
 // $("[data-header]").scrollupbar();
-$("[data-header]").headroom({
+$("[data-headroom]").headroom({
     classes : {
         // when element is initialised
         initial : "headroom",

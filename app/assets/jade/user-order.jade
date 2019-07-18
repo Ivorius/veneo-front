@@ -1,0 +1,54 @@
+extends templates/_site
+
+block template-content
+  +header("stay", null)
+
+  section.o-top
+    article.o-generic__article
+      h1.t-head--one Objednávka 7423
+      ul.control.o-breadcrumbs.clearfix
+        li.first
+          a(href="#")
+            span Domů
+        li.level_2
+          a(href="#")
+            span Uživatelský účet
+        li.level_3
+          a(href="#")
+            span Objednávky
+        li.current
+            span Objednávka
+
+      .o-generic__container.l-wrap
+        table.o-table.text-left
+          tbody
+            tr
+              td <strong>Datum objednání</strong>
+              td 18.07.2019
+            tr
+              td <strong>Stav objednávky</strong>
+              td Aktualizována 18.07.2019
+            tr
+              td <strong>Doprava</strong>
+              td Osobní odběr - 0 Kč
+            tr
+              td <strong>Platba</strong>
+              td Hotově při osobním odběru - 0 Kč
+            tr
+              td <strong>Objednávka pro</strong>
+              td
+                address Patrik Illy<br> Borovského 683/44<br> 73401 Karviná - Ráj<br> Czech Republic
+            tr
+              td <strong>Objednané zboží</strong>
+              td
+                ul.o-list
+                  li.o-list__item 1x Lecitie 6 - prsten s růžovým zirkonem 630 Kč
+                  li.o-list__item 1x Lecitie 6 - prsten s růžovým zirkonem 690 Kč
+                  li.o-list__item 1x Artemis 8 - prsten s australským opálem a čirými zirkony 1 362 Kč
+            tr
+              td <strong>Poznámka k objednávce</strong>
+              td Poznámka k objednávce.
+
+  include partials/_stats
+
+  include partials/_footer

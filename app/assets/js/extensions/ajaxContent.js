@@ -4,7 +4,7 @@
     $.nette.ext('ajaxContent', {
         start: function() {
             // $.scrollupbar.destroy();
-            $("[data-header]").headroom('destroy');
+            $("[data-headroom]").headroom('destroy');
         },
         success: function (payload) {
 
@@ -12,7 +12,7 @@
                 for (var i in payload.snippets) {
                     if(i == 'snippet--ajaxContent') {
                         ajaxContent = true;
-                        $("[data-header]").removeClass('o-header--fade').addClass('o-header--stay');
+                        $("[data-headroom]").removeClass('o-header--fade').addClass('o-header--stay');
 
                         veneoDropdown();
                         veneoScroll();
@@ -32,7 +32,7 @@
         },
         complete: function() {
             // $("[data-header]").scrollupbar();
-            $("[data-header]").headroom({
+            $("[data-headroom]").headroom({
                 classes : {
                     // when element is initialised
                     initial : "headroom",

@@ -1,0 +1,40 @@
+extends templates/_site
+
+block template-content
+  +header("stay", null)
+
+  section.o-top
+    article.o-generic__article
+      h1.t-head--one Moje objednávky
+      ul.control.o-breadcrumbs.clearfix
+        li.first
+          a(href="#")
+            span Domů
+        li.level_2
+          a(href="#")
+            span Uživatelský účet
+        li.current
+            span Objednávky
+
+      .o-generic__container.l-wrap
+        table.o-table.text-left
+          tbody
+            tr
+              td <strong>#</strong>
+              td <strong>Datum objednání</strong>
+              td <strong>Faktura</strong>
+              td <strong>Cena</strong>
+              td <strong>Stav objednávky</strong>
+              td <strong>Akce</strong>
+            tr
+              td 7423
+              td 18.07.2019
+              td 19010217
+              td 2 682 Kč
+              td Aktualizována
+              td
+                a(href="/user/order?order_id=7423") Ukázat
+
+  include partials/_stats
+
+  include partials/_footer

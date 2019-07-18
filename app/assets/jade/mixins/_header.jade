@@ -1,5 +1,5 @@
 mixin header(type, activeItem)
-  header#js-header.o-header(data-header, class="o-header--#{type}")
+  header#js-header.o-header(data-header, data-headroom, class="o-header--#{type}")
     .o-header__content
       a.o-header__logo.o-logo(href="index.html"): include ../../svg/logo_veneo_new.svg
       small.o-header__badge.t-smallcaps Lubomír Krčmář od r. 1991
@@ -36,7 +36,7 @@ mixin header(type, activeItem)
               span.o-toggle__text--active Zavřít
           nav.o-pages
             ul.o-pages__list
-              each link, instance in {"Naše šperky": "product-list.html", "Ruční výroba": "generic-page.html", "Šperky na zakázku": "generic-page.html", "Časté otázky": "faq.html", "Kontakty": "contact.html"}
+              each link, instance in {"Úvod": "index.html", "Filozofie Veneo": "filozofie-veneo.html", "Šperky na zakázku": "sperky-na-zakazku.html", "Časté otázky": "faq.html", "Kontakty": "contact.html"}
                 li.o-pages__item
                   a.o-pages__link(href=link, class=activeItem == instance ? "link--is-active" : null, data-close)= instance
         .o-hud__cell.l-inline__cell

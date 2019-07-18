@@ -33,13 +33,13 @@ function veneoWaypoints() {
   var headerObj = document.getElementById("js-header");
 
   // Header background-color waypoint
-  var headerFade = $body.waypoint({
-    handler: function(direction) {
-      $("[data-header]").toggleClass("header--not-top", direction == "down");
-    },
-    offset: function() {
-      // Triger once scrolled past its height
-      return -headerObj.clientHeight
-    }
-  })
+  // var headerFade = $body.waypoint({
+  //   handler: function(direction) {
+  //     $("[data-header]").toggleClass("header--not-top", direction == "down");
+  //   },
+  //   offset: function() {
+  //     // Triger once scrolled past its height
+  //     return -headerObj.clientHeight
+  //   }
+  // })
 }

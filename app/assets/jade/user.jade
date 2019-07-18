@@ -1,0 +1,75 @@
+extends templates/_site
+
+block template-content
+  +header("stay", null)
+
+  section.o-top
+    article.o-generic__article
+      h1.t-head--one Uživatelský účet - username
+      ul.control.o-breadcrumbs.clearfix
+        li.first
+          a(href="#")
+            span Domů
+        li.current
+          span Uživatelský účet
+
+      .o-generic__container.l-wrap
+        h2.t-head--two Info
+        table.o-table.text-left
+          tbody
+            tr
+              td <strong>Vytvořeno</strong>
+              td 15.07.2019
+            tr
+              td <strong>Poslední přihlášení</strong>
+              td 18.07.2019 15:03:25
+            tr
+              td <strong>Akce</strong>
+              td <a href="/user/orders">zobrazit objednávky</a> | <a href="/user/change-password">změnit heslo</a> | <a href="/homepage/logout">odhlásit se</a>
+      .o-generic__container.l-wrap
+        h2.t-head--two Nastavení uživatele
+        form.o-order.o-order--nospace
+          .o-order__section
+            .o-order__container
+              fieldset.o-order__set.o-order__set--nospace
+                each input in ["Jméno", "Příjmení", "Email"]
+                  .o-order__field--medium
+                    input.o-input(type="text", placeholder=input, value=input)
+                .o-order__field--medium
+                  select
+                    option +420 (Česko)
+                    option +421 (Slovensko)
+                    option +49 (Německo)
+                  input.o-input(type="text", placeholder="Telefon" value="Telefon")
+                each input in ["Ulice a č.p.", "Město", "PSČ"]
+                  .o-order__field--medium
+                    input.o-input(type="text", placeholder=input, value=input)
+                .o-order__field--medium
+                  label.o-order__label Stát
+                  select
+                    option Česká Republika
+                    option Slovakia
+                each input in ["Firma", "IČ", "DIČ"]
+                  .o-order__field--medium
+                    input.o-input(type="text", placeholder=input, value=input)
+                .o-order__field--medium
+                  label.o-check.o-order__check
+                    input.o-check__input(type="checkbox")
+                    span.o-check__box: include ../svg/icon_check_small.svg
+                    span.o-check__text Zasílat newsletter
+          .o-order__action--empty
+            button.o-order__submit.o-submit--solid(type="submit") Uložit
+
+        .o-order
+          .o-order__section.text-center
+            .o-order__container
+              .o-order__bar
+                .o-order__head.t-head--five Spárovat s Facebook účtem<br> <small>(poté se lze přihlašovat pomocí facebooku)</small>
+              .o-order__set
+                a(href="/module/external-auth.facebook/homepage/prepare?type=register")
+                  svg.social_icon.facebook.size48
+                    use(xlink:href="#facebook-icon-round")
+
+  include partials/_stats
+
+  include partials/_footer
