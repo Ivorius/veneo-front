@@ -63,22 +63,4 @@
         }
     });
 
-    $.nette.ext('flashMessages', {
-        success: function (payload) {
-
-            if (payload.snippets) {
-                for (var i in payload.snippets) {
-                    if (i == 'snippet--flashMessages') {
-                        $body.removeClass("notification--is-closed");
-
-                        setTimeout(function() {
-                            notify(true);
-                        }, 2000);
-                    }
-                }
-            }
-
-        }
-    });
-
 })(jQuery);
