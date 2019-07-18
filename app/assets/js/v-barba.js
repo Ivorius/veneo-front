@@ -27,6 +27,7 @@ veneoToggle();
 veneoFlickity();
 veneoTabs();
 veneoWaypoints();
+notifyCookie();
 
 // /* Barba.js */
 // Barba.Pjax.init();

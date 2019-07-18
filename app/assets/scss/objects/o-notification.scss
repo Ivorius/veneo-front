@@ -29,7 +29,8 @@
 }
 
 .o-notification--static {
-  //&:not(:hover),
+  display: none;
+
   .notification-static--is-closed & {
     transform: translateY(-100%);
   }

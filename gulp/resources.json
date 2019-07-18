@@ -27,6 +27,7 @@
       "app/assets/js/veneo-product.js",
       "app/assets/js/veneo-selectSubmit.js",
 
+      "bower_components/js-cookie/src/js.cookie.js",
       "bower_components/flickity/dist/flickity.pkgd.js",
       "bower_components/flickity-fade/flickity-fade.js",
       "bower_components/imagesloaded/imagesloaded.pkgd.js",
