@@ -66,12 +66,23 @@
   @include clearfix;
 }
 .o-qa__entry {
-  padding-top: 1.25em;
+  padding-top: em(78) + 1.25em;
+  margin-top: -(em(78));
 
   @include media($tablet-up) {
     @include span-columns(5 of 12);
 
     clear: both;
+  }
+
+  @include media($laptop-up) {
+    padding-top: em(124) + 1.25em;
+    margin-top: -(em(124));
+  }
+
+  @include media($tv) {
+    padding-top: 7.25em  + 1.25em; // 20 * 7.25 = 145 = o-header Height
+    margin-top: -7.25em; // 20 * 7.25 = 145 = o-header Height
   }
 }
 
