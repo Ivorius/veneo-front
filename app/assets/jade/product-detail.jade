@@ -146,13 +146,13 @@ block template-content
   section.o-detail__body.l-wrap
     ul.o-tabs(data-tabs)
       li.o-tabs__item
-        a.o-tabs__link(href="javascript::"): h2.o-tabs__title Popis šperku
+        a.o-tabs__link.js-tabs-description(href="javascript::"): h2.o-tabs__title Popis šperku
         .o-tabs__content
           article.o-article
             h1.o-article__title.t-head--five Tanečnice — prsten se safírem a&nbsp;čirými zirkony
             .o-article__content
               p.o-article__text: +dummy(50)
-              p.o-article__contact Dotazy Vám rádi zodpovíme e-mailem na #[a.t-link--tan(href="javascript::") zlatnictvi@veneo.cz], telefonicky na +420 582 337 520 či prostřednictvím #[a.t-link--tan(href="javascript::") diskuze k tomuto šperku].
+              p.o-article__contact Dotazy Vám rádi zodpovíme e-mailem na #[a.t-link--tan(href="javascript::") zlatnictvi@veneo.cz], telefonicky na +420 582 337 520 či prostřednictvím #[a.t-link--tan.js-fake-tab(href="javascript::", data-target=".js-tabs-comments") diskuze k tomuto šperku].
 
           .o-perks
             h3.o-perks__title.t-head--two Ke šperku získáte
@@ -163,7 +163,7 @@ block template-content
                   strong.o-perks__text= instance
 
       li.o-tabs__item
-        a.o-tabs__link(href="javascript::"): h2.o-tabs__title 9 komentářů
+        a.o-tabs__link.js-tabs-comments(href="javascript::"): h2.o-tabs__title 9 komentářů
         .o-tabs__content
           section.o-chat
             .o-chat__list

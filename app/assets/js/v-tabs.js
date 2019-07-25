@@ -8,7 +8,7 @@ function veneoTabs() {
     $(this).children("li").first().children("a").addClass(tabActiveClass).next().addClass(tabOpenClass);
   });
 
-  $("[data-tabs]").on("click", "li > a", function(event) {
+  $("[data-tabs]").on("click", "li > a, [data-tabs-link]", function(event) {
     event.preventDefault();
 
     var $tabItem = $(this);
@@ -25,5 +25,11 @@ function veneoTabs() {
     Waypoint.refreshAll();
 
     panelRestick($sticky, document.getElementById("js-sticky-end"));
+  });
+
+  $(".js-fake-tab").on("click", function(event) {
+    event.preventDefault();
+
+    $($(this).data("target")).trigger("click");
   });
 }
