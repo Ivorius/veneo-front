@@ -1,4 +1,4 @@
-function notify(force, static, cookie) {
+function notify(force, static, cookie, expires) {
   $body.toggleClass("notification--is-active", !force);
 
   if (force) {
@@ -10,7 +10,7 @@ function notify(force, static, cookie) {
   }
 
   if (cookie) {
-    Cookies.set("notification-" + cookie, true);
+    Cookies.set("notification-" + cookie, true, { expires: expires });
   }
 
   // setTimeout(function() {
