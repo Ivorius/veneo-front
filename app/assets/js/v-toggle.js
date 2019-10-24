@@ -1,6 +1,7 @@
 function veneoToggle() {
   $("[data-toggle]").on("click", function(event) {
     event.preventDefault();
+    event.stopImmediatePropagation();
 
     var
       $thisEl = $(this);
