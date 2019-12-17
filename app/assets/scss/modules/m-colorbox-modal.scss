@@ -1,4 +1,6 @@
 #cboxLoadedContent {
+  padding: 2.5em;
+  border: 0 !important;
 
   ul.error {
     list-style-type:none;
@@ -7,9 +9,36 @@
     background: $negative--900;
   }
 
-
   .snippetmodal {
     margin: 25px 15px 10px;
   }
 
+  .o-notification__content {
+    display: block;
+  }
+
+  .o-notification__icon {
+    margin-right: 0;
+  }
+
+  .o-notification__text {
+    display: block;
+    margin-top: 1em;
+  }
+
+  // @include media($tablet-up) {
+  //   padding: 2.5em;
+  // }
+}
+
+#cboxClose {
+  top: 1.5em !important;
+  right: 1.5em !important;
+  width: 22px !important;
+  height: 22px !important;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 22 22' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23414ed9' stroke-width='3' fill='none'%3E%3Cpath d='M2 20L20 2M2 2l18 18'/%3E%3C/g%3E%3C/svg%3E") no-repeat center !important;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }

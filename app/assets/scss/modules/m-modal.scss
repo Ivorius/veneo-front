@@ -13,7 +13,7 @@
 
   overflow: auto;
 
-  background-color: rgba(black, .9);
+  background-color: rgba(black, .8);
   text-align: left;
 
   &__overlay {
@@ -46,6 +46,12 @@
     position: absolute;
     top: 1.5em;
     right: 1.25em;
+
+    &:active,
+    &:hover {
+      color: #414ed9;
+      opacity: 0.9;
+    }
 
     @include media($tablet-up) {
       top: 2.75em;

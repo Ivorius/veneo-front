@@ -21,9 +21,23 @@ function notify(force, static, cookie, expires) {
 function notifyCookie() {
   $("[data-notification]").each(function () {
     var $this = $(this);
+    var cookie = $this.data("notification");
 
-    if (!Cookies.get("notification-" + $this.data("notification"))) {
-      $this.show();
+    if (!Cookies.get("notification-" + cookie)) {
+      var href = $this.find(".o-notification__content");
+      var expires = $this.data("expire");
+
+      $.colorbox({
+        inline: true,
+        href: href,
+        opacity: 0.8,
+        width: "400px",
+        maxWidth: "90%"
+      });
+
+      Cookies.set("notification-" + cookie, true, { expires: expires });
     }
   });
 }
+
+
