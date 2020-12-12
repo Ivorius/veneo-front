@@ -11,7 +11,8 @@
     "svg": "gulp svg",
     "build": "gulp build",
     "bower": "bower install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx npm-force-resolutions"
   },
   "author": "",
   "license": "ISC",
@@ -36,6 +37,9 @@
     "hygienist-middleware": "^0.1.0",
     "node-bourbon": "^1.2.3",
     "node-neat": "^1.7.2"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "dependencies": {
     "barba.js": "^1.0.0",
