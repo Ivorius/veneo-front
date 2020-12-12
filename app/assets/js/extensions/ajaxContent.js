@@ -8,7 +8,6 @@
         success: function (payload) {
 
             if (payload.snippets) {
-                console.log(payload.snippets);
                 for (var i in payload.snippets) {
                     if(i == 'snippet--ajaxContent') {
                         this.ajaxContent = true;
