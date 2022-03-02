@@ -38,7 +38,7 @@
 
 .o-notification--neutral, .o-notification--info { background-color: $neutral--900; }
 .o-notification--positive, .o-notification--success, .o-notification--ok { background-color: $positive--550; }
-.o-notification--negative, .o-notification--error { background-color: $negative--900; }
+.o-notification--negative, .o-notification--error { background-color: $negative--900; color: black;}
 
 .o-notification {
   &__wrap {
